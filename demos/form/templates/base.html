@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+        <meta charset="utf-8">
+        <title>{% block title %}Template - HelloFlask{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        {% block styles %}
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css' ) }}">
+            <link rel="stylesheet" href="{{ url_for('static',filename = 'css/bootstrap.css') }}">
+        {% endblock %}
+    {% endblock %}
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+    </ul>
+</nav>
+
+<main>
+    {% for message in get_flashed_messages() %}
+        <div class="alert">{{ message }}</div>
+    {% endfor %}
+    {% block content %}{% endblock %}
+</main>
+<footer>
+    {% block footer %}
+        <small> &copy; 2018 <a href="#" title="Written by ZHOU">ZHOU</a> /
+            <a href="#" title="Fork me on GitHub">GitHub</a> /
+            <a href="http://zhouhy.com" title="A HelloFlask project">HelloFlask</a>
+        </small>
+    {% endblock %}
+</footer>
+{% block scripts %}{% endblock %}
+</body>
+</html>

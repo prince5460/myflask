@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import form_field %}
+
+{% block content %}
+    <h2>Basic Form</h2>
+
+    <form method="post">
+        {{ form.csrf_token }}<!--渲染csrf令牌隐藏字段-->
+{#        {{ form.username.label }}<br>#}
+{#        {{ form.username }}<br>#}
+{#        {% for message in form.username.errors %}#}
+{#            <small class="error">{{ message }}</small><br>#}
+{#        {% endfor %}#}
+{#        {{ form.password.label }}<br>#}
+{#        {{ form.password }}<br>#}
+{#        {% for message in form.password.errors %}#}
+{#            <small class="error">{{ message }}</small><br>#}
+{#        {% endfor %}#}
+        {{ form_field(form.username) }}
+        {{ form_field(form.password) }}
+        {{ form.remember }}{{ form.remember.label }}<br>
+        {{ form.submit }}<br>
+    </form>
+{% endblock %}
