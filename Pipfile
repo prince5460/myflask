@@ -9,6 +9,11 @@ watchdog = "*"
 [packages]
 flask = "*"
 python-dotenv = "*"
+itsdangerous = "*"
+flask-babel = "*"
+flask-wtf = "*"
+flask-ckeditor = "*"
+flask-dropzone = "*"
 
 [requires]
 python_version = "3.6"
