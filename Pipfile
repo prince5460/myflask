@@ -20,6 +20,9 @@ flask-migrate = "*"
 flask-mail = "*"
 sendgrid = "*"
 flask-caching = "*"
+flask-debugtoolbar = "*"
+redis = "*"
+python-memcached = "*"
 
 [requires]
 python_version = "3.6"
