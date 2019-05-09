@@ -23,6 +23,9 @@ flask-caching = "*"
 flask-debugtoolbar = "*"
 redis = "*"
 python-memcached = "*"
+flask-assets = "*"
+jsmin = "*"
+cssmin = "*"
 
 [requires]
 python_version = "3.6"
